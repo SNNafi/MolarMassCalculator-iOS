@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  AnimationEPUB
+//  MolarMassCalculator
 //
-//  Created by Shahriar Nasim Nafi on 24/9/21.
+//  Created by Shahriar Nasim Nafi on 10/10/21.
 //
 
 import UIKit
