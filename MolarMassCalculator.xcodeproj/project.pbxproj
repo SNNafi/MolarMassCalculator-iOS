@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C76A511D27133FF7001E1150 /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A511C27133FF7001E1150 /* ElementInfoView.swift */; };
+		C76A5122271368D5001E1150 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A5121271368D5001E1150 /* CalculatorView.swift */; };
+		C774920B271310EF00BE7AAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774920A271310EF00BE7AAD /* ContentView.swift */; };
+		C774920D271310F300BE7AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C774920C271310F300BE7AAD /* Assets.xcassets */; };
+		C7749210271310F300BE7AAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C774920F271310F300BE7AAD /* Preview Assets.xcassets */; };
+		C774921A271310F400BE7AAD /* MolarMassCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7749219271310F400BE7AAD /* MolarMassCalculatorTests.swift */; };
+		C7749224271310F400BE7AAD /* MolarMassCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7749223271310F400BE7AAD /* MolarMassCalculatorUITests.swift */; };
+		C7749226271310F400BE7AAD /* MolarMassCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7749225271310F400BE7AAD /* MolarMassCalculatorUITestsLaunchTests.swift */; };
+		C77492342713111100BE7AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77492322713111000BE7AAD /* SceneDelegate.swift */; };
+		C77492352713111100BE7AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77492332713111000BE7AAD /* AppDelegate.swift */; };
+		C774923B2713124800BE7AAD /* molar_mass_calculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C77492392713124800BE7AAD /* molar_mass_calculator.cpp */; };
+		C7749241271313EC00BE7AAD /* MolarMassCalculatorSwift.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7749240271313EC00BE7AAD /* MolarMassCalculatorSwift.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7749216271310F400BE7AAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C77491FD271310EF00BE7AAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7749204271310EF00BE7AAD;
+			remoteInfo = MolarMassCalculator;
+		};
+		C7749220271310F400BE7AAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C77491FD271310EF00BE7AAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7749204271310EF00BE7AAD;
+			remoteInfo = MolarMassCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C76A511C27133FF7001E1150 /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
+		C76A5121271368D5001E1150 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		C7749205271310EF00BE7AAD /* MolarMassCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MolarMassCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C774920A271310EF00BE7AAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C774920C271310F300BE7AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C774920F271310F300BE7AAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7749215271310F400BE7AAD /* MolarMassCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MolarMassCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7749219271310F400BE7AAD /* MolarMassCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolarMassCalculatorTests.swift; sourceTree = "<group>"; };
+		C774921F271310F400BE7AAD /* MolarMassCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MolarMassCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7749223271310F400BE7AAD /* MolarMassCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolarMassCalculatorUITests.swift; sourceTree = "<group>"; };
+		C7749225271310F400BE7AAD /* MolarMassCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MolarMassCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C77492322713111000BE7AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C77492332713111000BE7AAD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C77492362713112B00BE7AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C77492382713124700BE7AAD /* MolarMassCalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MolarMassCalculator-Bridging-Header.h"; sourceTree = "<group>"; };
+		C77492392713124800BE7AAD /* molar_mass_calculator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = molar_mass_calculator.cpp; sourceTree = "<group>"; };
+		C774923E271312E400BE7AAD /* MolarMassCalculatorSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MolarMassCalculatorSwift.h; sourceTree = "<group>"; };
+		C7749240271313EC00BE7AAD /* MolarMassCalculatorSwift.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MolarMassCalculatorSwift.mm; sourceTree = "<group>"; };
+		C77492422713145900BE7AAD /* molar_mass_calculator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = molar_mass_calculator.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7749202271310EF00BE7AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7749212271310F400BE7AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C774921C271310F400BE7AAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C76A511B27133F92001E1150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C774920A271310EF00BE7AAD /* ContentView.swift */,
+				C76A511C27133FF7001E1150 /* ElementInfoView.swift */,
+				C76A5121271368D5001E1150 /* CalculatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C77491FC271310EF00BE7AAD = {
+			isa = PBXGroup;
+			children = (
+				C7749207271310EF00BE7AAD /* MolarMassCalculator */,
+				C7749218271310F400BE7AAD /* MolarMassCalculatorTests */,
+				C7749222271310F400BE7AAD /* MolarMassCalculatorUITests */,
+				C7749206271310EF00BE7AAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7749206271310EF00BE7AAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7749205271310EF00BE7AAD /* MolarMassCalculator.app */,
+				C7749215271310F400BE7AAD /* MolarMassCalculatorTests.xctest */,
+				C774921F271310F400BE7AAD /* MolarMassCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7749207271310EF00BE7AAD /* MolarMassCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				C76A511B27133F92001E1150 /* View */,
+				C77492432713267500BE7AAD /* App */,
+				C77492372713122300BE7AAD /* CLib */,
+				C77492362713112B00BE7AAD /* Info.plist */,
+				C774920C271310F300BE7AAD /* Assets.xcassets */,
+				C774920E271310F300BE7AAD /* Preview Content */,
+			);
+			path = MolarMassCalculator;
+			sourceTree = "<group>";
+		};
+		C774920E271310F300BE7AAD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C774920F271310F300BE7AAD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7749218271310F400BE7AAD /* MolarMassCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7749219271310F400BE7AAD /* MolarMassCalculatorTests.swift */,
+			);
+			path = MolarMassCalculatorTests;
+			sourceTree = "<group>";
+		};
+		C7749222271310F400BE7AAD /* MolarMassCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7749223271310F400BE7AAD /* MolarMassCalculatorUITests.swift */,
+				C7749225271310F400BE7AAD /* MolarMassCalculatorUITestsLaunchTests.swift */,
+			);
+			path = MolarMassCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		C77492372713122300BE7AAD /* CLib */ = {
+			isa = PBXGroup;
+			children = (
+				C77492422713145900BE7AAD /* molar_mass_calculator.hpp */,
+				C7749240271313EC00BE7AAD /* MolarMassCalculatorSwift.mm */,
+				C77492392713124800BE7AAD /* molar_mass_calculator.cpp */,
+				C77492382713124700BE7AAD /* MolarMassCalculator-Bridging-Header.h */,
+				C774923E271312E400BE7AAD /* MolarMassCalculatorSwift.h */,
+			);
+			path = CLib;
+			sourceTree = "<group>";
+		};
+		C77492432713267500BE7AAD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C77492332713111000BE7AAD /* AppDelegate.swift */,
+				C77492322713111000BE7AAD /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7749204271310EF00BE7AAD /* MolarMassCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7749229271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculator" */;
+			buildPhases = (
+				C7749201271310EF00BE7AAD /* Sources */,
+				C7749202271310EF00BE7AAD /* Frameworks */,
+				C7749203271310EF00BE7AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MolarMassCalculator;
+			packageProductDependencies = (
+			);
+			productName = MolarMassCalculator;
+			productReference = C7749205271310EF00BE7AAD /* MolarMassCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7749214271310F400BE7AAD /* MolarMassCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C774922C271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculatorTests" */;
+			buildPhases = (
+				C7749211271310F400BE7AAD /* Sources */,
+				C7749212271310F400BE7AAD /* Frameworks */,
+				C7749213271310F400BE7AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7749217271310F400BE7AAD /* PBXTargetDependency */,
+			);
+			name = MolarMassCalculatorTests;
+			productName = MolarMassCalculatorTests;
+			productReference = C7749215271310F400BE7AAD /* MolarMassCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C774921E271310F400BE7AAD /* MolarMassCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C774922F271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculatorUITests" */;
+			buildPhases = (
+				C774921B271310F400BE7AAD /* Sources */,
+				C774921C271310F400BE7AAD /* Frameworks */,
+				C774921D271310F400BE7AAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7749221271310F400BE7AAD /* PBXTargetDependency */,
+			);
+			name = MolarMassCalculatorUITests;
+			productName = MolarMassCalculatorUITests;
+			productReference = C774921F271310F400BE7AAD /* MolarMassCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C77491FD271310EF00BE7AAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					C7749204271310EF00BE7AAD = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+					};
+					C7749214271310F400BE7AAD = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C7749204271310EF00BE7AAD;
+					};
+					C774921E271310F400BE7AAD = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C7749204271310EF00BE7AAD;
+					};
+				};
+			};
+			buildConfigurationList = C7749200271310EF00BE7AAD /* Build configuration list for PBXProject "MolarMassCalculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C77491FC271310EF00BE7AAD;
+			packageReferences = (
+			);
+			productRefGroup = C7749206271310EF00BE7AAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7749204271310EF00BE7AAD /* MolarMassCalculator */,
+				C7749214271310F400BE7AAD /* MolarMassCalculatorTests */,
+				C774921E271310F400BE7AAD /* MolarMassCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7749203271310EF00BE7AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7749210271310F300BE7AAD /* Preview Assets.xcassets in Resources */,
+				C774920D271310F300BE7AAD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7749213271310F400BE7AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C774921D271310F400BE7AAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7749201271310EF00BE7AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7749241271313EC00BE7AAD /* MolarMassCalculatorSwift.mm in Sources */,
+				C76A5122271368D5001E1150 /* CalculatorView.swift in Sources */,
+				C77492352713111100BE7AAD /* AppDelegate.swift in Sources */,
+				C774923B2713124800BE7AAD /* molar_mass_calculator.cpp in Sources */,
+				C774920B271310EF00BE7AAD /* ContentView.swift in Sources */,
+				C77492342713111100BE7AAD /* SceneDelegate.swift in Sources */,
+				C76A511D27133FF7001E1150 /* ElementInfoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7749211271310F400BE7AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C774921A271310F400BE7AAD /* MolarMassCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C774921B271310F400BE7AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7749226271310F400BE7AAD /* MolarMassCalculatorUITestsLaunchTests.swift in Sources */,
+				C7749224271310F400BE7AAD /* MolarMassCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7749217271310F400BE7AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7749204271310EF00BE7AAD /* MolarMassCalculator */;
+			targetProxy = C7749216271310F400BE7AAD /* PBXContainerItemProxy */;
+		};
+		C7749221271310F400BE7AAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7749204271310EF00BE7AAD /* MolarMassCalculator */;
+			targetProxy = C7749220271310F400BE7AAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C7749227271310F400BE7AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7749228271310F400BE7AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C774922A271310F400BE7AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MolarMassCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MolarMassCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MolarMassCalculator/CLib/MolarMassCalculator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C774922B271310F400BE7AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MolarMassCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MolarMassCalculator/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MolarMassCalculator/CLib/MolarMassCalculator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C774922D271310F400BE7AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MolarMassCalculator.app/MolarMassCalculator";
+			};
+			name = Debug;
+		};
+		C774922E271310F400BE7AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MolarMassCalculator.app/MolarMassCalculator";
+			};
+			name = Release;
+		};
+		C7749230271310F400BE7AAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MolarMassCalculator;
+			};
+			name = Debug;
+		};
+		C7749231271310F400BE7AAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J4SV74FUBV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MolarMassCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7749200271310EF00BE7AAD /* Build configuration list for PBXProject "MolarMassCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7749227271310F400BE7AAD /* Debug */,
+				C7749228271310F400BE7AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7749229271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C774922A271310F400BE7AAD /* Debug */,
+				C774922B271310F400BE7AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C774922C271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C774922D271310F400BE7AAD /* Debug */,
+				C774922E271310F400BE7AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C774922F271310F400BE7AAD /* Build configuration list for PBXNativeTarget "MolarMassCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7749230271310F400BE7AAD /* Debug */,
+				C7749231271310F400BE7AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C77491FD271310EF00BE7AAD /* Project object */;
+}
