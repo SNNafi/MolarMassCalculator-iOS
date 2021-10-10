@@ -18,16 +18,15 @@ struct CalculatorView: View {
         VStack(alignment: .center) {
             
             TextField("Enter Formula", text: $formula)
+                .multilineTextAlignment(.center)
                 .fixedSize()
                 .padding(.top, 30)
-                .padding(.bottom, 10)
-            
+                .padding(.bottom, 10)            
             
             Text("Molecular Weight")
             Text(mass)
                 .font(.largeTitle)
             
-       
             ScrollView {
                 LazyVGrid(columns: [ GridItem(.flexible()),  GridItem(.flexible())], spacing: 40) {
                         ForEach(elementInfos) {
@@ -39,8 +38,6 @@ struct CalculatorView: View {
                         }
                 }
             }
-            
-            
         }
         .onChange(of: formula) { _ in
             elementInfos = []
@@ -51,17 +48,12 @@ struct CalculatorView: View {
             calculator.performCalculation(formula)
             if (!calculator.isWrongFormula()) {
                 mass = String(format: "%0.2f", arguments: [calculator.getMolarMass()])
-                
-                
-                //                print(calculator.getMolarMass()
+
                 for i in calculator.getResult() {
                     if let elementInfo = i as? ElementInfoSwift {
                         elementInfos.append(elementInfo)
-                        print("\(elementInfo.symbol!) ->", elementInfo.number)
-                        
                     }
                 }
-                print("-------------")
             } else {
                 mass = "Wrong Formula!"
             }
