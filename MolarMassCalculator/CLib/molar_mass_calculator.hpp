@@ -65,7 +65,9 @@ private:
             Element("Pa", 231.0359), Element("U", 238.0289), Element("Np", 237), Element("Pu", 244), Element("Am", 243),
             Element("Cm", 247), Element("Bk", 247), Element("Cf", 251), Element("Es", 252), Element("Fm", 257),
             Element("Md", 258), Element("No", 259), Element("Lr", 262), Element("Rf", 261), Element("Db", 262),
-            Element("Sg", 266), Element("Bh", 264), Element("Hs", 277), Element("Mt", 268)
+            Element("Sg", 266), Element("Bh", 264), Element("Hs", 277), Element("Mt", 278), Element("Ds", 281),
+            Element("Rg", 282), Element("Cn", 285), Element("Nh", 286), Element("Fl", 289), Element("Mc", 290),
+            Element("Lv", 293), Element("Ts", 294), Element("Og", 294),
     };
     vector<int> elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     vector<int> elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
