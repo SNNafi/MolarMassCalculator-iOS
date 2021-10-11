@@ -45,7 +45,9 @@ struct CalculatorView: View {
                 mass = ""
                 return
             }
-            calculator.performCalculation(formula)
+            
+            let sFormula = formula.replacingOccurrences(of: ".", with: "")
+            calculator.performCalculation(sFormula)
             if (!calculator.isWrongFormula()) {
                 mass = String(format: "%0.2f", arguments: [calculator.getMolarMass()])
 
