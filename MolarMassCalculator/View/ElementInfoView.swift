@@ -3,6 +3,7 @@
 //  MolarMassCalculator
 //
 //  Created by Shahriar Nasim Nafi on 10/10/21.
+//  Copyright © 2021 Shahriar Nasim Nafi. All rights reserved.
 //
 
 import SwiftUI
@@ -21,7 +22,7 @@ struct ElementInfoView: View {
     }
     
     private var totalElementMass: Double {
-        calculator.getElementMolarMass(bySymbol: elementInfo!.symbol) * Double(elementInfo!.number)
+        elementMass * Double(elementInfo!.number)
     }
     
     private var percentage: Double {
