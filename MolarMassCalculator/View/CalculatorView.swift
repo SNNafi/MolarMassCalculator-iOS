@@ -39,6 +39,13 @@ struct CalculatorView: View {
                         }
                 }
             }
+            HStack {
+                Text("Made with ")
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.red)
+                Text("by Shahriar Nasim Nafi")
+            }
+            
         }
         .onChange(of: formula) { _ in
             elementInfos = []

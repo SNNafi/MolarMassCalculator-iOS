@@ -131,7 +131,7 @@ bool MolarMassCalculator::parse() {
                     index1 >= 0 ? c4++ : OK = false;
                 }
                 if (c4 > 1) {
-                    int z = parseInt(formula.substr(1 + zz, (c4 + zz) - (1 + zz) - 1));
+                    int z = parseInt(formula.substr(1 + zz, (c4 + zz) - (1 + zz)));
                     multiplier *= z;
                 }
                 c++;
