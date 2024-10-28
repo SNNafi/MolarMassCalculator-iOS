@@ -11,32 +11,34 @@ import SwiftUI
 struct CalculatorView: View {
     
     @State var formula: String = ""
-    @State var mass: String = ""
+    @State var molarMassText: String = ""
+    @State var molarMass: Double = 0
     @State var elementInfos = [ElementInfoSwift]()
-    @EnvironmentObject var calculator: MolarMassCalculatorSwift
+    var calculator: MolarMassCalculatorSwift = MolarMassCalculatorSwift()
+    @Environment(\.colorScheme) var colorScheme
+    @State var isPresented = false
+    
     
     var body: some View {
         VStack(alignment: .center) {
-            
-            TextField("Enter Formula", text: $formula)
-                .multilineTextAlignment(.center)
-                .fixedSize()
-                .padding(.top, 30)
-                .padding(.bottom, 10)            
+            TextField("Enter Formula", text: $formula) {
+                // UIApplication.shared.endEditing()
+            }
+            .multilineTextAlignment(.center)
+            .fixedSize()
+            .padding(.top, 30)
+            .padding(.bottom, 10)
             
             Text("Molecular Weight")
-            Text(mass)
+            Text(molarMassText)
                 .font(.largeTitle)
             
             ScrollView {
                 LazyVGrid(columns: [ GridItem(.flexible()),  GridItem(.flexible())], spacing: 40) {
-                        ForEach(elementInfos) {
-                            elementInfo in
-                            if let mass = Double(mass) {
-                                ElementInfoView(totalMass: mass, elementInfo: elementInfo)
-                            }
-                           
-                        }
+                    ForEach(elementInfos) {
+                        elementInfo in
+                        ElementInfoView(calculator: calculator, totalMass: molarMass, elementInfo: elementInfo)
+                    }
                 }
             }
             HStack {
@@ -47,25 +49,40 @@ struct CalculatorView: View {
             }
             
         }
+        .alert(isPresented: $isPresented) {
+            Alert(title: Text("Manaul"), message: Text("This calculator can handle about all types of formula. But you need to keep in mind this\n\nFor 4H2O, you should write (H2O)4\n\nAnother example\n\n4MgCO3.Mg(OH)2.4H2O, you should write (MgCO3)4.Mg(OH)2.(H2O)4"), dismissButton: .default(Text("Got it!")))
+        }
+        .toolbar {
+            Button {
+                // UIApplication.shared.endEditing()
+                isPresented = true
+            } label: {
+                Image(systemName: "info.circle.fill")
+                    .foregroundColor(colorScheme == .light ? .black : .white)
+            }
+        }
         .onChange(of: formula) { _ in
             elementInfos = []
             guard !formula.isEmpty else {
-                mass = ""
+                molarMassText = ""
                 return
             }
             
             let sFormula = formula.replacingOccurrences(of: ".", with: "")
             calculator.performCalculation(sFormula)
+            
             if (!calculator.isWrongFormula()) {
-                mass = String(format: "%0.2f", arguments: [calculator.getMolarMass()])
-
+                molarMass = calculator.getMolarMass()
+                molarMassText = String(format: "%0.2f g/mol", arguments: [molarMass])
+                let result = calculator.getResult()
+                print(result)
                 for i in calculator.getResult() {
                     if let elementInfo = i as? ElementInfoSwift {
                         elementInfos.append(elementInfo)
                     }
                 }
             } else {
-                mass = "Wrong Formula!"
+                molarMassText = "Wrong Formula!"
             }
         }
     }
@@ -73,7 +90,6 @@ struct CalculatorView: View {
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView()
-            .environmentObject(MolarMassCalculatorSwift())
+        CalculatorView(calculator: MolarMassCalculatorSwift())
     }
 }

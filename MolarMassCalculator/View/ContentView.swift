@@ -9,11 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+   
     var body: some View {
         NavigationView {
-            CalculatorView()
-                .navigationTitle("Molar Mass Calculator")
-                .navigationBarTitleDisplayMode(.inline)
+            GeometryReader { geo in
+                ZStack(alignment: .center) {
+                    CalculatorView()
+                        .navigationTitle("Molar Mass Calculator")
+                        .navigationBarTitleDisplayMode(.inline)
+                        
+                  
+                }
+            }
+            
         }
        
     }
@@ -22,7 +31,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MolarMassCalculatorSwift())
+           
     }
 }
 

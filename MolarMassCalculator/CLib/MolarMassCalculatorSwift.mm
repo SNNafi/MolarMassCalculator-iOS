@@ -10,6 +10,9 @@
 #import "MolarMassCalculatorSwift.h"
 #import "molar_mass_calculator.hpp"
 
+
+
+
 @implementation ElementInfoSwift: NSObject
 
 -(id) initWithElementInfo:(NSString *)symbol number:(int)number {
@@ -24,10 +27,10 @@
 
 
 
-
 @interface MolarMassCalculatorSwift()
 @property MolarMassCalculator *calculator;
 @end
+
 @implementation MolarMassCalculatorSwift
 - (instancetype)init {
     if (self = [super init]) {

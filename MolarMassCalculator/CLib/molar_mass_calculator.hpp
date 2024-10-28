@@ -39,7 +39,7 @@ class MolarMassCalculator {
 private:
     string formula;
     bool wrongFormula = false;
-    double mass;
+    double mass = 0;
     vector<ElementInfo> elementInfos;
     vector<Element> elements = {
             Element("H", 1.0079), Element("He", 4.0026), Element("Li", 6.941), Element("Be", 9.0122), Element("B", 10.811),
@@ -70,8 +70,8 @@ private:
             Element("Rg", 282), Element("Cn", 285), Element("Nh", 286), Element("Fl", 289), Element("Mc", 290),
             Element("Lv", 293), Element("Ts", 294), Element("Og", 294),
     };
-    vector<int> elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    vector<int> elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    vector<int> elementIndex;
+    vector<int> elementNumber;
     const string number = "0123456789";
     string elementS;
 
@@ -90,6 +90,8 @@ private:
     void clearData();
 
 public:
+    MolarMassCalculator();
+    
     string getMolarMass(string formula);
 
     vector<ElementInfo> getResult();

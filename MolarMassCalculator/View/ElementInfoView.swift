@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ElementInfoView: View {
-    @EnvironmentObject var calculator: MolarMassCalculatorSwift
+    var calculator: MolarMassCalculatorSwift
     var totalMass: Double = 8.01
     var elementInfo = ElementInfoSwift(elementInfo: "He", number: 2)
     
@@ -72,7 +72,7 @@ struct ElementInfoView: View {
 
 struct ElementInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        ElementInfoView()
-            .environmentObject(MolarMassCalculatorSwift())
+        ElementInfoView(calculator: MolarMassCalculatorSwift())
+           
     }
 }

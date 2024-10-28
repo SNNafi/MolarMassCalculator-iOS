@@ -22,6 +22,12 @@ Element::Element(string symbol, double mass) : symbol(move(symbol)), mass(mass) 
 ElementInfo::ElementInfo(string name, int number) : name(move(name)), number(number) {}
 
 
+MolarMassCalculator::MolarMassCalculator() {
+    elementIndex.resize(60, 0);
+    elementNumber.resize(60, 0);
+    makeElementDict();
+}
+
 // find atomic number
 int MolarMassCalculator::findElementIndex(string text) {
     int index = 0;
@@ -50,8 +56,8 @@ bool MolarMassCalculator::parse() {
     int totalLoop = 0;
     int marker2 = -1;
     int multiplier = 1;
-    int a1[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int a2[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int a1[60] = {0};
+    int a2[60] = {0};
     while (c <= formula.size() - 1 && !wrongFormula) {
         bool OK = true;
         int index = findElementIndex(formula.substr(c, 2));
@@ -163,10 +169,11 @@ bool MolarMassCalculator::parse() {
         }
     }
 
-    for (int i = 0; i <= elementIndex.size(); i++) {
+    for (int i = 0; i < elementIndex.size(); i++) {
         elementIndex[i] = a2[i];
         elementNumber[i] = a1[i];
     }
+    
     if (wrongFormula) {
         return false;
     }
@@ -174,19 +181,22 @@ bool MolarMassCalculator::parse() {
 }
 
 double MolarMassCalculator::calculateMass() {
-
-    for (int i = 0; i <= elementIndex.size(); i++) {
+    mass = 0; // Reset mass before calculation
+    for (int i = 0; i < elementIndex.size(); i++) {
         if (elementIndex[i] == 0) {
             break;
         }
-        mass += elements[elementIndex[i] - 1].mass * elementNumber[i];
+        // Added bounds check for elements vector
+        if (elementIndex[i] > 0 && elementIndex[i] <= elements.size()) {
+            mass += elements[elementIndex[i] - 1].mass * elementNumber[i];
+        }
     }
-    mass = (mass * 100) / 100;
     return mass;
 }
 
 void MolarMassCalculator::makeElementDict() {
-    for (int i = 0; i <= elements.size(); i++) {
+    elementS.clear();
+    for (int i = 0; i < elements.size(); i++) {
         elementS.append(elements[i].symbol);
         if (elements[i].symbol.size() == 1) {
             elementS.append("*");
@@ -214,6 +224,10 @@ string MolarMassCalculator::getMolarMass(string formula) {
         if (elementIndex[i] == 0) {
             break;
         }
+        
+        if (elementIndex[i] > 118){
+            break;
+        }
 
         int index = elementAlreadyExist(elements[elementIndex[i] - 1].symbol);
         if (index != -1) {
@@ -237,12 +251,15 @@ string MolarMassCalculator::getMolarMass(string formula) {
 void MolarMassCalculator::performCalculation(string formula) {
     this->formula = formula;
     clearData();
-    makeElementDict();
-    bool success = parse();
-    calculateMass();
+    bool success = parse();  
     if (success) {
+        calculateMass();
         for (int i = 0; i < elementIndex.size(); i++) {
             if (elementIndex[i] == 0) {
+                break;
+            }
+            
+            if (elementIndex[i] > 118){
                 break;
             }
 
@@ -252,6 +269,10 @@ void MolarMassCalculator::performCalculation(string formula) {
             } else {
                 ElementInfo elementInfo = ElementInfo(elements[elementIndex[i] - 1].symbol, elementNumber[i]);
                 elementInfos.push_back(elementInfo);
+                
+                for (int i = 0; i < elementInfos.size(); i++) {
+                    cout << elementInfos[i].name << " " << elementInfos[i].number << "\n";
+                }
             }
         }
     }
@@ -277,9 +298,8 @@ bool MolarMassCalculator::isWrongFormula() {
 void MolarMassCalculator::clearData() {
     mass = 0;
     wrongFormula = false;
-    elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    elementS = "";
+    elementIndex = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    elementNumber = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     elementInfos.clear();
 }
 

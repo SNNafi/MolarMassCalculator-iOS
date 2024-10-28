@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C76A511D27133FF7001E1150 /* ElementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A511C27133FF7001E1150 /* ElementInfoView.swift */; };
 		C76A5122271368D5001E1150 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A5121271368D5001E1150 /* CalculatorView.swift */; };
+		C76A51262715CFBA001E1150 /* ManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A51252715CFBA001E1150 /* ManualView.swift */; };
+		C76A51292715F85A001E1150 /* UIApplication+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A51282715F85A001E1150 /* UIApplication+Ex.swift */; };
 		C774920B271310EF00BE7AAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774920A271310EF00BE7AAD /* ContentView.swift */; };
 		C774920D271310F300BE7AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C774920C271310F300BE7AAD /* Assets.xcassets */; };
 		C7749210271310F300BE7AAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C774920F271310F300BE7AAD /* Preview Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		C76A511C27133FF7001E1150 /* ElementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInfoView.swift; sourceTree = "<group>"; };
 		C76A5121271368D5001E1150 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		C76A51252715CFBA001E1150 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
+		C76A51282715F85A001E1150 /* UIApplication+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ex.swift"; sourceTree = "<group>"; };
 		C7749205271310EF00BE7AAD /* MolarMassCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MolarMassCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C774920A271310EF00BE7AAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C774920C271310F300BE7AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,8 +95,17 @@
 				C774920A271310EF00BE7AAD /* ContentView.swift */,
 				C76A511C27133FF7001E1150 /* ElementInfoView.swift */,
 				C76A5121271368D5001E1150 /* CalculatorView.swift */,
+				C76A51252715CFBA001E1150 /* ManualView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C76A51272715F840001E1150 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C76A51282715F85A001E1150 /* UIApplication+Ex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C77491FC271310EF00BE7AAD = {
@@ -118,6 +131,7 @@
 		C7749207271310EF00BE7AAD /* MolarMassCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				C76A51272715F840001E1150 /* Extension */,
 				C76A511B27133F92001E1150 /* View */,
 				C77492432713267500BE7AAD /* App */,
 				C77492372713122300BE7AAD /* CLib */,
@@ -314,8 +328,10 @@
 				C76A5122271368D5001E1150 /* CalculatorView.swift in Sources */,
 				C77492352713111100BE7AAD /* AppDelegate.swift in Sources */,
 				C774923B2713124800BE7AAD /* molar_mass_calculator.cpp in Sources */,
+				C76A51262715CFBA001E1150 /* ManualView.swift in Sources */,
 				C774920B271310EF00BE7AAD /* ContentView.swift in Sources */,
 				C77492342713111100BE7AAD /* SceneDelegate.swift in Sources */,
+				C76A51292715F85A001E1150 /* UIApplication+Ex.swift in Sources */,
 				C76A511D27133FF7001E1150 /* ElementInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_ASSET_PATHS = "\"MolarMassCalculator/Preview Content\"";
 				DEVELOPMENT_TEAM = J4SV74FUBV;
 				ENABLE_PREVIEWS = YES;
@@ -484,6 +500,7 @@
 				INFOPLIST_FILE = MolarMassCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -491,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -509,7 +526,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_ASSET_PATHS = "\"MolarMassCalculator/Preview Content\"";
 				DEVELOPMENT_TEAM = J4SV74FUBV;
 				ENABLE_PREVIEWS = YES;
@@ -517,6 +534,7 @@
 				INFOPLIST_FILE = MolarMassCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -524,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = snnafi.MolarMassCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
