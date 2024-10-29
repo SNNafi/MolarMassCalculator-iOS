@@ -19,5 +19,9 @@
 			</array>
 		</dict>
 	</dict>
+    <key>CFBundleDisplayName</key>
+    <string>Molar Mass Calculator</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
 </dict>
 </plist>

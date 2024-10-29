@@ -1,5 +1,8 @@
 # Molar Mass Calculator - iOS 
 
+## Sample App
+<a href='https://apps.apple.com/us/app/easy-molar-mass-calculator/id1589977298'><img  height="70" alt='Download on the App Store' src='https://github.com/SNNafi/MolarMassCalculator-iOS/blob/main/Pictures/app_store.svg?raw=true'/></a>
+
 __UI: SwiftUI__
 
 __Demonstrate how to use C++ code directly in an iOS Project. See CLib for details.__
